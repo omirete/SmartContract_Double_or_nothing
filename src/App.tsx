@@ -1,26 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import useWeb3, { Web3HookContext } from './helpers/useWeb3'
+import { ChakraProvider, Box } from '@chakra-ui/react'
+import DoubleOrNothing from './sections/DoubleOrNothing'
+import Header from './sections/Header'
 
 function App() {
+  const web3hook = useWeb3()
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <ChakraProvider>
+      <Web3HookContext.Provider value={web3hook}>
+        <Box padding="5">
+          <Header />
+          <DoubleOrNothing />
+        </Box>
+      </Web3HookContext.Provider>
+    </ChakraProvider>
+  )
 }
 
-export default App;
+export default App
