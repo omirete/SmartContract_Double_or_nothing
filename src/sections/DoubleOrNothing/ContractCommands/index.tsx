@@ -1,10 +1,12 @@
-import { Stack, Button } from '@chakra-ui/react'
-import useContractCommands from './useContractCommands'
+import { Stack, Button } from "@chakra-ui/react";
+import { useContext } from "react";
+import { ContractDataContext } from "../useContractData";
+import useContractCommands from "./useContractCommands";
 
 const ContractCommands: React.FC = () => {
-  const { handleJoin, handleClaimPrize } = useContractCommands()
+  const { handleJoin, handleClaimPrize } = useContractCommands();
   return (
-    <Stack direction="row" marginTop="2">
+    <Stack direction="row" marginTop="3">
       <Button colorScheme="purple" onClick={handleJoin}>
         I want double or nothing!
       </Button>
@@ -12,7 +14,7 @@ const ContractCommands: React.FC = () => {
         Claim prize
       </Button>
     </Stack>
-  )
-}
+  );
+};
 
-export default ContractCommands
+export default ContractCommands;

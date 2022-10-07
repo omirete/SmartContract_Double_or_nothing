@@ -1,4 +1,4 @@
-import { Box, BoxProps } from '@chakra-ui/react'
+import { Box, BoxProps } from "@chakra-ui/react";
 
 const Section: React.FC<BoxProps> = (props) => {
   return (
@@ -9,7 +9,7 @@ const Section: React.FC<BoxProps> = (props) => {
       padding="3"
       {...props}
     />
-  )
-}
+  );
+};
 
-export default Section
+export default Section;

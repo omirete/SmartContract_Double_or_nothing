@@ -1,10 +1,10 @@
-import useWeb3, { Web3HookContext } from './helpers/useWeb3'
-import { ChakraProvider, Box } from '@chakra-ui/react'
-import DoubleOrNothing from './sections/DoubleOrNothing'
-import Header from './sections/Header'
+import useWeb3, { Web3HookContext } from "./helpers/useWeb3";
+import { ChakraProvider, Box } from "@chakra-ui/react";
+import DoubleOrNothing from "./sections/DoubleOrNothing";
+import Header from "./sections/Header";
 
 function App() {
-  const web3hook = useWeb3()
+  const web3hook = useWeb3();
   return (
     <ChakraProvider>
       <Web3HookContext.Provider value={web3hook}>
@@ -14,7 +14,7 @@ function App() {
         </Box>
       </Web3HookContext.Provider>
     </ChakraProvider>
-  )
+  );
 }
 
-export default App
+export default App;

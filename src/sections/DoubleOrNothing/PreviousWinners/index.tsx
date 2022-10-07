@@ -1,6 +1,5 @@
 import {
   Box,
-  Button,
   Heading,
   Link,
   Table,
@@ -10,17 +9,16 @@ import {
   Th,
   Thead,
   Tr,
-} from '@chakra-ui/react'
-import { useContext } from 'react'
-import { ContractDataContext } from '../useContractData'
+} from "@chakra-ui/react";
+import { useContext } from "react";
+import { ContractDataContext } from "../useContractData";
 
 const PreviousWinners: React.FC = () => {
-  const { contractData, reload } = useContext(ContractDataContext)
+  const { contractData } = useContext(ContractDataContext);
   return (
     <Box marginTop="3">
       <Heading size="sm">Previous winners:</Heading>
-      <Button onClick={reload}>Reload</Button>
-      <TableContainer>
+      <TableContainer marginTop="3">
         <Table size="sm">
           <Thead>
             <Tr>
@@ -57,7 +55,7 @@ const PreviousWinners: React.FC = () => {
         </Table>
       </TableContainer>
     </Box>
-  )
-}
+  );
+};
 
-export default PreviousWinners
+export default PreviousWinners;

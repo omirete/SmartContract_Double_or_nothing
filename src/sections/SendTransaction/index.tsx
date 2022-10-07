@@ -11,22 +11,22 @@ import {
   NumberInputStepper,
   Select,
   Stack,
-} from '@chakra-ui/react'
-import { useContext } from 'react'
-import Section from '../../components/Section'
-import { Web3HookContext } from '../../helpers/useWeb3'
+} from "@chakra-ui/react";
+import { useContext } from "react";
+import Section from "../../components/Section";
+import { Web3HookContext } from "../../helpers/useWeb3";
 
 const SendTransaction: React.FC = () => {
-  const { sendTransaction } = useContext(Web3HookContext)
+  const { sendTransaction } = useContext(Web3HookContext);
   return (
     <Section title="Send a transaction" className="mt-5">
       <form
         onSubmit={(e) => {
-          e.preventDefault()
-          const accountTo: string = (e.target as any).accountTo.value
-          const amount: number = parseFloat((e.target as any).amount.value)
-          const unit: 'eth' | 'gwei' | 'wei' = (e.target as any).unit.value
-          sendTransaction(accountTo, amount, unit)
+          e.preventDefault();
+          const accountTo: string = (e.target as any).accountTo.value;
+          const amount: number = parseFloat((e.target as any).amount.value);
+          const unit: "eth" | "gwei" | "wei" = (e.target as any).unit.value;
+          sendTransaction(accountTo, amount, unit);
         }}
       >
         <FormControl>
@@ -66,7 +66,7 @@ const SendTransaction: React.FC = () => {
         </Button>
       </form>
     </Section>
-  )
-}
+  );
+};
 
-export default SendTransaction
+export default SendTransaction;

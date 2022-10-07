@@ -1,5 +1,5 @@
-import { Box, Heading, Highlight, Link, Text } from '@chakra-ui/react'
-import WalletConnection from './WalletConnection'
+import { Box, Heading, Highlight, Link, Text } from "@chakra-ui/react";
+import WalletConnection from "./WalletConnection";
 
 const Header: React.FC = () => {
   return (
@@ -13,8 +13,8 @@ const Header: React.FC = () => {
       </Box>
       <Box marginTop="2" paddingX="3" paddingTop="2">
         <Highlight
-          query={['0.01 ETH']}
-          styles={{ px: '1', py: '1', bg: 'orange.100' }}
+          query={["0.01 ETH"]}
+          styles={{ px: "1", py: "1", bg: "orange.100" }}
         >
           By sending 0.01 ETH to this Smart Contract, you have a 50% chance of
           doubling your coins and a 50% chance of getting nothing. Money supply
@@ -23,11 +23,11 @@ const Header: React.FC = () => {
         </Highlight>
         <Text marginTop="2">Will you risk it? 🤔</Text>
         <Text marginTop="2">
-          See smart contract{' '}
+          See smart contract{" "}
           <Link href="#" color="purple.400">
             source code
-          </Link>{' '}
-          and{' '}
+          </Link>{" "}
+          and{" "}
           <Link href="#" color="purple.400">
             deployment transaction
           </Link>
@@ -35,7 +35,7 @@ const Header: React.FC = () => {
         </Text>
       </Box>
     </>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

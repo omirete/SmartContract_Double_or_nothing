@@ -1,9 +1,9 @@
-import { Box, Button, Text } from '@chakra-ui/react'
-import { useContext } from 'react'
-import { Web3HookContext } from '../../helpers/useWeb3'
+import { Box, Button, Text } from "@chakra-ui/react";
+import { useContext } from "react";
+import { Web3HookContext } from "../../helpers/useWeb3";
 
 const WalletConnection: React.FC = () => {
-  const { account, chain, connect } = useContext(Web3HookContext)
+  const { account, chain, connect } = useContext(Web3HookContext);
   return (
     <Box fontSize="sm" color="gray.600">
       {!account && (
@@ -19,12 +19,12 @@ const WalletConnection: React.FC = () => {
       {account && (
         <>
           <Text>Connected to web3 🟢</Text>
-          <Text>Chain: {chain ? chain.name : '-'}</Text>
+          <Text>Chain: {chain ? chain.name : "-"}</Text>
           <Text>Address: {account}</Text>
         </>
       )}
     </Box>
-  )
-}
+  );
+};
 
-export default WalletConnection
+export default WalletConnection;
