@@ -1,6 +1,4 @@
 import { Stack, Button } from "@chakra-ui/react";
-import { useContext } from "react";
-import { ContractDataContext } from "../useContractData";
 import useContractCommands from "./useContractCommands";
 
 const ContractCommands: React.FC = () => {
