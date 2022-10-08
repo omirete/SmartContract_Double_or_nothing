@@ -37,7 +37,7 @@ const useContractCommands = (): UseContractCommands => {
     } else {
       alert("Please connect your wallet first.");
     }
-  }, [contract, account]);
+  }, [contract, account, reload]);
 
   const handleClaimPrize = useCallback(() => {
     if (contract && account) {
@@ -60,7 +60,7 @@ const useContractCommands = (): UseContractCommands => {
     } else {
       alert("Please connect your wallet first.");
     }
-  }, [contract, account]);
+  }, [contract, account, reload]);
 
   return {
     handleJoin,
