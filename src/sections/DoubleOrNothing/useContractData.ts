@@ -201,13 +201,11 @@ const useContractData = (): UseContractData => {
 
   useEffect(() => {
     if (account) {
-      console.log("Trigerred effect1!");
       recalculate_player_stats(account);
       if (contract) {
         reload_pending_claims(contract, account);
       }
     } else {
-      console.log("Trigerred effect2!");
       setContractData((prev) => ({
         ...prev,
         player_stats: undefined,
